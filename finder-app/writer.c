@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
 
     const char *writefile = argv[1];
     const char *writestr = argv[2];
-    
+
 
     FILE *file = fopen(writefile, "w");
     if (file == NULL) {
@@ -26,6 +26,7 @@ int main(int argc, char *argv[]) {
     }
 
     fprintf(file, "%s\n", writestr);
+    
     fclose(file);
 
     openlog("writer", LOG_PID | LOG_NDELAY, LOG_USER);
